@@ -1,0 +1,8 @@
+---
+# Install editor packages on redhat based distributions.
+
+- name: Install editor packages.
+  yum: name={{ item }} state=installed
+  with_items:
+    - emacs-nox
+    - vim

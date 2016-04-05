@@ -1,0 +1,8 @@
+---
+# Install editor packages on debian based distributions.
+
+- name: Install editors.
+  apt: name={{ item }} state=latest update_cache=yes install_recommends=yes
+  with_items:
+    - emacs24-nox
+    - vim
